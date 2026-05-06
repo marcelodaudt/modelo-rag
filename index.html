@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload de Pasta</title>
+</head>
+<body>
+    <h2>Upload de Múltiplos Arquivos</h2>
+    <form action="/api/upsert/folder_upload" method="post" enctype="multipart/form-data">
+        <label>Selecione os arquivos:</label><br>
+        <input name="files" type="file" multiple><br><br>
+        
+        <label>Metadados (JSON):</label><br>
+        <input name="metadata" type="text" value='{"origem": "meu_pc"}' style="width: 300px;"><br><br>
+        
+        <button type="submit">Enviar para o Pinecone</button>
+    </form>
+</body>
+</html>
